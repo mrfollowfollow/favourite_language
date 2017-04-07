@@ -124,6 +124,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
     rdoc (4.3.0)
+    sass (3.4.23)
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -166,6 +167,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.5)
   rails_12factor
+  sass
   sdoc (~> 0.4.0)
   spring
   turbolinks
