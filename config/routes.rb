@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   
   controller :favourite do
       post '/result' => :result
-      # get '/result' => :result
   end
 
   # Example of regular route:
