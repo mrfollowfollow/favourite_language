@@ -20,16 +20,10 @@ class FavouriteController < ApplicationController
         
         return @result = "No repos found for #{@username}" if languages.empty? == true
         
-        fav = languages.max_by { |l| languages.count(l) }
+        lang_hash = languages.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+        fav = lang_hash.max_by { |v| v }[0]
         
         return @result = "#{@username}, Your favourite language is #{fav}"
-        
-        # @repos = Hash[repos.map {|key, value| [key, value]}]
-        # @repos = @repos.select { |k| !k['language'].nil? }
-        # @test = ["java", "java", "java", "ruby", "ruby", "javascript", "c", "c"]
-        # freq = test.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
-        # @hash = freq
-        # @result =  freq.max_by { |v| freq[v] }
     end
     
 end
