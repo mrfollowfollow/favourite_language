@@ -3,6 +3,7 @@ default: &default
       encoding: SQL_ASCII
       pool: 5
       username: ubuntu
+      password: 123
 
 development:
   <<: *default
