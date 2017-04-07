@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favourite Language</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+<h1>Favourite Language</h1>
+<p>Determines your favourite language from github.</p>
+<%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+    background-image: -webkit-linear-gradient(-135deg, #DE6262 0%, #FFB88C 100%);
+    background-image: -moz-linear-gradient(-135deg, #DE6262 0%, #FFB88C 100%);
+    background-image: -o-linear-gradient(-135deg, #DE6262 0%, #FFB88C 100%);
+    background-image: linear-gradient(-135deg, #DE6262 0%, #FFB88C 100%);
+    min-height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    text-align: center
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size: 4em;
+    color: white;
+}
+
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+}
+
+h3 span {
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+    font-size: 1.5em;
+    color: white;
+}
+
+#wrapper {
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text] {
+    background: #FFFFFF;
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+    border-radius: 2px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+    font-size: 1em;
+}
+
+input[type=submit] {
+    height: 30px;
+    width: 40px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+    font-size: 1em;
+}
+
+input:placeholder-shown {
+    
+}
