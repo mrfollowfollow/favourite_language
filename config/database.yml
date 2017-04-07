@@ -1,17 +1,8 @@
 default: &default
-      adapter: postgresql
-      encoding: SQL_ASCII
-      pool: 5
-      username: ubuntu
-
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 development:
   <<: *default
-  database: app_development
-
-test:
-  <<: *default
-  database: app_test
-
-production:
-  <<: *default
-  database: app_production
+  database: workspace_development
+  template: template0
