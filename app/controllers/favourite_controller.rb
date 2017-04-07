@@ -12,11 +12,9 @@ class FavouriteController < ApplicationController
         github = HTTP.get("https://api.github.com/users/#{@username}/repos")
         
         return @result = "No username on Github matches #{@username}" if github.code == 404
-        
-        repo_info_string = github.to_s
-        
-        repo_info_hash = JSON.parse(repo_info_string)
-        languages = repo_info_hash.map { |a| a.fetch('language') }.compact
+
+        repo_info = JSON.parse(github.to_s)
+        languages = repo_info.map { |a| a.fetch('language') }.compact
         
         return @result = "No repos found for #{@username}" if languages.empty? == true
         
