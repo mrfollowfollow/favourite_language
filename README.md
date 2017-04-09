@@ -21,3 +21,4 @@ Determines favourite language from a users github username using language of the
 
 start postgresql server on c9: sudo service postgresql start
 
+to run tests: rake spec
