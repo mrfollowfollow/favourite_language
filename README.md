@@ -18,3 +18,6 @@
                                                                                             
                                                                                                                            
 Determines favourite language from a users github username using language of there public repositories.
+
+start postgresql server on c9: sudo service postgresql start
+

@@ -1,27 +1,31 @@
 class FavouriteController < ApplicationController
   
-  before_filter :fav_lang
-    
-
+  before_filter :get_username
     
     require "http"
     require "json"
     
-    def fav_lang
-        @username = params[:username]
-        github = HTTP.get("https://api.github.com/users/#{@username}/repos")
+    def get_username 
+      @username = params[:username]
+      fav_lang(@username)
+    end
+    
+    def fav_lang(u)
         
-        return @result = "No username on Github matches #{@username}" if github.code == 404
+        github = HTTP.get("https://api.github.com/users/#{u}/repos")
+        
+        return @result = "No username on Github matches #{u}" if github.code == 404
 
         repo_info = JSON.parse(github.to_s)
         languages = repo_info.map { |a| a.fetch('language') }.compact
         
-        return @result = "No repos found for #{@username}" if languages.empty? == true
+        return @result = "No repos found for #{u}" if languages.empty? == true
         
         lang_hash = languages.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
         fav = lang_hash.max_by { |v| v }[0]
         
-        return @result = "#{@username}, Your favourite language is #{fav}"
+        return @result = "#{u}, Your favourite language is #{fav}"
     end
+  
     
 end
