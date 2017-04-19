@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'favourite#index'
+  root 'index#index'
   
   controller :favourite do
       post '/result' => :result
